@@ -72,12 +72,12 @@ if __name__ == '__main__':# Program start from here
         setText(text)
         #Si la humedad deseada sobrepasa un 75% tanto por arriba como por abajo la tomada se activa el buzzer
         if (moisture < int(humedad_deseada*0.75) | moisture > int(humedad_deseada/0.75)):
-            for i in range(100):
+            for i in range(49):
                 print(i)
                 GPIO.output(buzzer, GPIO.HIGH)
                 time.sleep(1)
                 GPIO.output(buzzer, GPIO.LOW)
-                time.sleep(30)
+                time.sleep(17)
         time.sleep(100)
         #Se limpia la pantalla
         clear_display()
