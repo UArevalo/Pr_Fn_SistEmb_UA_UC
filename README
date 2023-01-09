@@ -1,0 +1,10 @@
+Se dispone de tres archivos python. El archivo principal “Main” utiliza el archivo secundario 
+“Grove_moisture_sensor” para comunicarse con el sensor y recibir el valor de humedad, 
+a su vez este utiliza el archivo “adc” para leer los valores del sensor. 
+Este valor oscila entre 0 y 700 por lo que es dividido entre 7 para expresar la humedad 
+en porcentaje. Este valor es mostrado a través de la pantalla LCD además de la fecha y hora
+ de la medición. Si el valor es un 75% mayor o menor al deseado se activará un zumbador 100 veces.
+ El programa “Main” se ejecutará a en punto y a y media de cada hora del día. 
+ El puerto analógico del sensor de humedad es el 2 y el digital del buzzer el 26.
+ Además la dirección I2C de la pantalla LCD es el 0x3e. Para su correcto funcionamineto se recomienda
+ crear un crontab en el que se ejecute cada media hora.
